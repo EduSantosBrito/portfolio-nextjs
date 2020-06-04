@@ -1,23 +1,26 @@
 {
-    "env": {
-        "browser": true,
-        "es6": true
-    },
-    "extends": ["plugin:react/recommended", "airbnb", "prettier"],
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
-    "parser": "babel-eslint",
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "prettier/@typescript-eslint",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": "./tsconfig.json",
         "ecmaFeatures": {
             "jsx": true
-        },
-        "allowImportExportEverywhere": true,
-        "ecmaVersion": 2018,
-        "sourceType": "module"
+        }
     },
-    "plugins": ["react", "prettier", "react-hooks"],
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     "rules": {
         "react/jsx-indent": "off",
         "react/jsx-indent-props": "off",
