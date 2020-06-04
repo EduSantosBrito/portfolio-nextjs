@@ -2,6 +2,7 @@
     "name": "porfolio-nextjs",
     "version": "0.1.0",
     "private": false,
+    "license": "MIT",
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
@@ -14,7 +15,8 @@
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "cypress:open": "cypress open"
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run"
     },
     "dependencies": {
         "cypress": "^4.7.0",
@@ -23,6 +25,7 @@
         "react-dom": "^16.13.0"
     },
     "devDependencies": {
+        "babel-eslint": "^10.1.0",
         "eslint": "^7.1.0",
         "eslint-config-airbnb": "^18.1.0",
         "eslint-config-prettier": "^6.11.0",
