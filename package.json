@@ -5,7 +5,7 @@
     "license": "MIT",
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged"
+            "pre-commit": "yarn cypress:run && lint-staged"
         }
     },
     "lint-staged": {
