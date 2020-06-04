@@ -41,17 +41,6 @@ jobs:
             "target_url": "'${GITHUB_WORKFLOW_URL}'"
             }'
 
-      - name: Get commit hash
-        uses: actions/checkout@v2
-
-      - name: Install node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "14.x"
-
-      - name: Install yarn dependencies
-        run: yarn install --prod
-
       - name: Run tests
         run: yarn cypress:run
         env:
