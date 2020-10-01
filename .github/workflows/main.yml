@@ -52,6 +52,9 @@ jobs:
       - name: Install yarn dependencies
         run: yarn install --prod
 
+      - name: Install cypress to run e2e tests
+        run: yarn add --dev --exact cypress
+
       - name: Run tests
         run: yarn cypress:run
         env:
