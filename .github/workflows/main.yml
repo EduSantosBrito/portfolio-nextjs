@@ -1,0 +1,77 @@
+name: End-to-end tests
+
+on: [deployment_status]
+
+jobs:
+  mark-commit-status-pending:
+    name: Mark commit "status" as "pending"
+    if: github.event.deployment_status.state == 'pending'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Request Github API with "pending" status
+        run: |
+          curl -L -X POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "state": "pending",
+            "context": "e2e-tests",
+            "description": "Waiting Deploy Previews from Vercel"
+            }'
+
+  e2e-tests:
+    name: Run tests e2e in Deploy Previews from Vercel
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Updating "pending" status with "Workflow URL"
+        run: |
+          GITHUB_WORKFLOW_URL=https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+          curl -L -X POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "state": "pending",
+            "context": "e2e-tests",
+            "description": "Running tests in Deploy Previews",
+            "target_url": "'${GITHUB_WORKFLOW_URL}'"
+            }'
+
+      - name: Get commit hash
+        uses: actions/checkout@v2
+
+      - name: Install node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: Install yarn dependencies
+        run: yarn install --prod
+
+      - name: Run tests
+        run: yarn cypress:run
+        env:
+          NODE_ENV: "ci"
+          CYPRESS_BASE_URL: ${{ github.event.deployment_status.target_url }}
+
+      - name: Update Github API status
+        if: always()
+        env:
+          JOB_CONTEXT: ${{ toJson(job) }}
+        run: |
+          GITHUB_WORKFLOW_URL=https://github.com/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID
+          JOB_STATUS=$(echo ${JOB_CONTEXT} | jq --raw-output '.status | ascii_downcase')
+          curl -L -X POST \
+          --url https://api.github.com/repos/${{ github.repository }}/statuses/${{ github.sha }} \
+          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'content-type: application/json' \
+          --data '{
+            "state": "'${JOB_STATUS}'",
+            "context": "e2e-tests",
+            "description": "Tests done successfully.",
+            "target_url": "'${GITHUB_WORKFLOW_URL}'"
+            }'
