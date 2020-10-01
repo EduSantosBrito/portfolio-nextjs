@@ -1,0 +1,48 @@
+{
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "prettier/@typescript-eslint",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:prettier/recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2020,
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "rules": {
+        "react/jsx-indent": "off",
+        "react/jsx-indent-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "prettier/prettier": ["error"],
+        "no-underscore-dangle": "off",
+        "strict": ["error", "global"],
+        "class-methods-use-this": "off",
+        "object-curly-newline": ["off"],
+        "global-require": "off",
+        "arrow-parens": ["error", "as-needed"],
+        "no-param-reassign": [
+            "error",
+            {
+                "props": false
+            }
+        ],
+        "react/jsx-one-expression-per-line": "off",
+        "react/prop-types": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "react/jsx-wrap-multilines": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
+    }
+}
