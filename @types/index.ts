@@ -1,4 +1,10 @@
+interface LogoColor {
+    dark: string;
+    white: string;
+}
+
 export interface Theme {
+    logo: LogoColor;
     colors: Colors;
     breakpoints: Breakpoints;
 }

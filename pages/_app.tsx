@@ -5,6 +5,10 @@ import { ThemeProvider } from 'styled-components';
 import { Theme } from '@types';
 
 const theme: Theme = {
+    logo: {
+        dark: '/logo-dark.svg',
+        white: '/logo-white.svg',
+    },
     colors: {
         primary: {
             main: '#6EA9EE',
@@ -47,6 +51,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                         width: 100%;
                         height: 100%;
                         font-family: 'Poppins', sans-serif;
+                        background-color: ${theme.colors.background};
                     }
                 `}
             </style>
