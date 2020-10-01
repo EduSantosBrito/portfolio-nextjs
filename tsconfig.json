@@ -15,9 +15,9 @@
         "jsx": "preserve",
         "baseUrl": ".",
         "paths": {
-            "~/types/*": ["@types/*"],
-            "~/components/*": ["components/*"],
-            "~/pages/*": ["pages/*"]
+            "@types/*": ["./@types/*"],
+            "@components/*": ["./components/*"],
+            "@pages/*": ["./pages/*"]
         }
     },
     "exclude": ["node_modules", "cypress", "commitlint.config.js"],
