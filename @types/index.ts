@@ -1,12 +1,8 @@
-interface LogoColor {
-    dark: string;
-    white: string;
-}
-
 export interface Theme {
     logo: LogoColor;
     colors: Colors;
     breakpoints: Breakpoints;
+    fontSizes: FontSizes;
 }
 
 interface Breakpoints {
@@ -29,4 +25,16 @@ interface Colors {
     typography: ColorShade;
     background: string;
     white: string;
+}
+
+interface LogoColor {
+    dark: string;
+    white: string;
+}
+
+interface FontSizes {
+    small: string;
+    default: string;
+    large: string;
+    extraLarge: string;
 }
