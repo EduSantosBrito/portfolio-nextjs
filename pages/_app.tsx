@@ -31,6 +31,12 @@ const theme: Theme = {
         lg: '1025px',
         xl: '1281px',
     },
+    fontSizes: {
+        small: '1rem',
+        default: '1.5rem',
+        large: '2.5rem',
+        extraLarge: '3rem',
+    },
 };
 
 const App: NextPage<AppProps> = ({ Component, pageProps }) => {
@@ -52,6 +58,19 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                         height: 100%;
                         font-family: 'Poppins', sans-serif;
                         background-color: ${theme.colors.background};
+                    }
+                    html {
+                        font-size: 10px;
+                    }
+                    @media (min-width: ${theme.breakpoints.md}) {
+                        html {
+                            font-size: 13px;
+                        }
+                    }
+                    @media (min-width: ${theme.breakpoints.lg}) {
+                        html {
+                            font-size: 16px;
+                        }
                     }
                 `}
             </style>
