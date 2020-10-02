@@ -13,7 +13,6 @@ const Home: React.FC = () => {
             <main>
                 <Navbar />
                 <Header />
-                <h1 id='title'>Soon</h1>
             </main>
         </div>
     );
