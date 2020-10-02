@@ -1,12 +1,13 @@
 import { WithTheme } from 'shared/withTheme';
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 64px;
 
     &::before {
         content: '';
@@ -24,7 +25,7 @@ export const HeaderContainer = styled.div`
 
 type HeroTextProps = WithTheme;
 
-export const HeroText = styled.p<HeroTextProps>`
+export const HeroText = styled.h1<HeroTextProps>`
     font-weight: 600;
     font-size: ${({ theme }: HeroTextProps) => theme.fontSizes.extraLarge};
     color: ${({ theme }: HeroTextProps) => theme.colors.white};
