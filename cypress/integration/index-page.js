@@ -4,7 +4,7 @@ describe('Index Page', () => {
         cy.visit('/');
     });
 
-    it('should have a title', () => {
-        cy.get('#title').should('have.length', 1);
+    it('should have a header', () => {
+        cy.get('#header').should('have.length', 1);
     });
 });
