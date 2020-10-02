@@ -3,7 +3,7 @@ import { HeaderContainer, HeroText, HeroTextOrange } from './style';
 
 const Header = () => {
     return (
-        <HeaderContainer>
+        <HeaderContainer id='header'>
             <HeroText>
                 Hello I&apos;m <HeroTextOrange>Brito</HeroTextOrange>
             </HeroText>
