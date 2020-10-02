@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Header from '@components/Header';
+import Navbar from '@components/Navbar';
 
 const Home: React.FC = () => {
     return (
@@ -11,7 +11,7 @@ const Home: React.FC = () => {
             </Head>
 
             <main>
-                <Header />
+                <Navbar />
                 <h1 id='title'>Soon</h1>
             </main>
         </div>
