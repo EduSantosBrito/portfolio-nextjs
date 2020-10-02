@@ -70,7 +70,8 @@ export const NavbarContainer = styled.div<NavbarContainerProps>`
         open &&
         css`
             position: fixed;
-            grid-template-rows: 15vh 60vh 15vh;
+            z-index: 10;
+            grid-template-rows: 15vh 50vh 15vh;
             height: 100vh;
             background-color: ${theme.colors.primary.main};
         `}
