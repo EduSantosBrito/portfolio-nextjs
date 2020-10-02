@@ -54,11 +54,11 @@ export const MenuIcon = styled.button<MenuIconProps>`
     }
 `;
 
-interface HeaderContainerProps extends WithTheme {
+interface NavbarContainerProps extends WithTheme {
     open: boolean;
 }
 
-export const HeaderContainer = styled.div<HeaderContainerProps>`
+export const NavbarContainer = styled.div<NavbarContainerProps>`
     padding: 3rem 2.5rem;
     width: 100vw;
     height: 15vh;
@@ -66,7 +66,7 @@ export const HeaderContainer = styled.div<HeaderContainerProps>`
     grid-template-columns: 1fr 1fr;
     align-items: flex-start;
 
-    ${({ open, theme }: HeaderContainerProps) =>
+    ${({ open, theme }: NavbarContainerProps) =>
         open &&
         css`
             position: fixed;

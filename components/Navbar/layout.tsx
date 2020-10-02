@@ -1,15 +1,15 @@
 import React, { Dispatch, SetStateAction } from 'react';
 import { Logo } from 'shared/Logo';
-import { ButtonLink, HeaderContainer, MenuIcon, NavList } from './style';
+import { ButtonLink, NavbarContainer, MenuIcon, NavList } from './style';
 
-interface HeaderLayoutProps {
+interface NavbarLayoutProps {
     open: boolean;
     onNavClick: Dispatch<SetStateAction<boolean>>;
 }
 
-const HeaderLayout = ({ open, onNavClick }: HeaderLayoutProps) => {
+const NavbarLayout = ({ open, onNavClick }: NavbarLayoutProps) => {
     return (
-        <HeaderContainer id='header' open={open}>
+        <NavbarContainer open={open}>
             <Logo dark={!open} />
             <MenuIcon onClick={() => onNavClick(!open)} open={open} />
             <NavList open={open}>
@@ -26,8 +26,8 @@ const HeaderLayout = ({ open, onNavClick }: HeaderLayoutProps) => {
             <ButtonLink onClick={() => open && onNavClick(!open)} href='#hireMe' dark={!open}>
                 Hire me
             </ButtonLink>
-        </HeaderContainer>
+        </NavbarContainer>
     );
 };
 
-export default HeaderLayout;
+export default NavbarLayout;
