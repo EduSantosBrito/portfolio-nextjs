@@ -34,7 +34,7 @@ const theme: Theme = {
     fontSizes: {
         small: '1rem',
         default: '1.5rem',
-        large: '2.5rem',
+        large: '2rem',
         extraLarge: '3rem',
     },
 };
