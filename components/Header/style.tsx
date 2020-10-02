@@ -70,7 +70,7 @@ export const HeaderContainer = styled.div<HeaderContainerProps>`
         open &&
         css`
             position: fixed;
-            grid-template-rows: 1fr 80vh 1fr;
+            grid-template-rows: 15vh 60vh 15vh;
             height: 100vh;
             background-color: ${theme.colors.primary.main};
         `}
