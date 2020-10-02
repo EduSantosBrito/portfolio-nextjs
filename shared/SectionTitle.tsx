@@ -11,6 +11,7 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
     display: inline-block;
     position: relative;
     z-index: 2;
+    margin: 32px 0;
 
     &::after {
         content: '';
@@ -27,7 +28,7 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
 
     &:hover {
         &::after {
-            height: 60%;
+            height: 50%;
         }
     }
 `;
