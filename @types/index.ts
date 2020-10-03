@@ -38,3 +38,9 @@ interface FontSizes {
     large: string;
     extraLarge: string;
 }
+
+export interface Language {
+    title: string;
+    years: number;
+    iconUrl: string;
+}

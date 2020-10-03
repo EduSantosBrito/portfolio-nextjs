@@ -16,7 +16,7 @@ const NavbarLayout = ({ open, onNavClick }: NavbarLayoutProps) => {
                 <a onClick={() => open && onNavClick(!open)} href='#header'>
                     Home
                 </a>
-                <a onClick={() => open && onNavClick(!open)} href='#whatIdo'>
+                <a onClick={() => open && onNavClick(!open)} href='#languages'>
                     What I do
                 </a>
                 <a onClick={() => open && onNavClick(!open)} href='#experiences'>

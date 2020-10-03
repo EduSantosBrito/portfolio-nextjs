@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Navbar from '@components/Navbar';
 import Header from '@components/Header';
+import Languages from '@components/Languages';
 
 const Home: React.FC = () => {
     return (
@@ -13,6 +14,7 @@ const Home: React.FC = () => {
             <main>
                 <Navbar />
                 <Header />
+                <Languages />
             </main>
         </div>
     );
