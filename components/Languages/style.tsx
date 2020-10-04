@@ -7,6 +7,7 @@ export const LanguagesContainer = styled.section`
     justify-content: center;
     align-items: center;
 `;
+
 export const CardsContainer = styled.section`
     width: 100%;
     display: grid;
