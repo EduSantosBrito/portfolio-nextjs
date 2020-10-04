@@ -7,7 +7,6 @@ export const ShowcaseContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
 `;
 
 type ShowcaseLinkProps = WithTheme;
