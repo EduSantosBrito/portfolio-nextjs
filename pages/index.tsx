@@ -4,6 +4,7 @@ import Navbar from '@components/Navbar';
 import Header from '@components/Header';
 import Languages from '@components/Languages';
 import Experiences from '@components/Experiences';
+import Showcase from '@components/Showcase';
 
 const Home: React.FC = () => {
     return (
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
                 <Header />
                 <Languages />
                 <Experiences />
+                <Showcase />
             </main>
         </div>
     );

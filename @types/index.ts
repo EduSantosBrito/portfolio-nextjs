@@ -57,3 +57,9 @@ export interface Experience {
     description?: string;
     techs?: Tech[];
 }
+
+export interface ShowcaseItem {
+    title: string;
+    description: string;
+    url: string;
+}
