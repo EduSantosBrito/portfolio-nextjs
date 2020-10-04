@@ -7,7 +7,9 @@ export const Card = styled.div<CardProps>`
     width: auto;
     min-width: 100px;
     max-width: 100vw;
-    height: 100px;
+    height: auto;
+    min-height: 100px;
+    max-height: 200px;
     margin: 0px 8px;
 
     @media (min-width: ${({ theme }: CardProps) => theme.breakpoints.md}) {
@@ -41,4 +43,5 @@ export const CardDescription = styled.p<CardDescriptionProps>`
     font-weight: 500;
     font-size: ${({ theme }: CardDescriptionProps) => theme.fontSizes.small};
     color: ${({ theme }: CardDescriptionProps) => theme.colors.typography.main};
+    max-width: 160px;
 `;
