@@ -25,6 +25,7 @@ export const HorizontalScrollContainer = styled.div`
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    overflow-y: hidden;
 
     -ms-overflow-style: none;
     scrollbar-width: none;
