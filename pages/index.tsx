@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Navbar from '@components/Navbar';
 import Header from '@components/Header';
 import Languages from '@components/Languages';
+import Experiences from '@components/Experiences';
 
 const Home: React.FC = () => {
     return (
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
                 <Navbar />
                 <Header />
                 <Languages />
+                <Experiences />
             </main>
         </div>
     );
