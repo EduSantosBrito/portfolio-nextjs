@@ -44,3 +44,16 @@ export interface Language {
     years: number;
     iconUrl: string;
 }
+
+export interface Tech {
+    title: string;
+}
+
+export interface Experience {
+    company: string;
+    startDate: string;
+    endDate?: string;
+    jobTitle: string;
+    description?: string;
+    techs?: Tech[];
+}
