@@ -63,3 +63,8 @@ export interface ShowcaseItem {
     description: string;
     url: string;
 }
+
+export interface SocialMediaItem {
+    icon: string;
+    url: string;
+}

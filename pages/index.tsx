@@ -6,6 +6,7 @@ import Languages from '@components/Languages';
 import Experiences from '@components/Experiences';
 import Showcase from '@components/Showcase';
 import HireMe from '@components/HireMe';
+import Footer from '@components/Footer';
 
 const Home: React.FC = () => {
     return (
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
                 <Experiences />
                 <Showcase />
                 <HireMe />
+                <Footer />
             </main>
         </div>
     );
