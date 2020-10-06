@@ -1,11 +1,14 @@
 import React from 'react';
-import { HireMeContainer, HireMeTitle, HireMeEmail } from './style';
+import { HireMeContainer, HireMeTitle, HireMeEmail, HireMeDraw, HireMeTextContainer } from './style';
 
 const HireMe = () => {
     return (
         <HireMeContainer id='hireMe'>
-            <HireMeTitle>Let&apos;s talk</HireMeTitle>
-            <HireMeEmail href='mailto:hi@brito.top'>hi@brito.top</HireMeEmail>
+            <HireMeDraw alt='Draw of a person sending email' />
+            <HireMeTextContainer>
+                <HireMeTitle>Let&apos;s talk</HireMeTitle>
+                <HireMeEmail href='mailto:hi@brito.top'>hi@brito.top</HireMeEmail>
+            </HireMeTextContainer>
         </HireMeContainer>
     );
 };

@@ -8,10 +8,20 @@ export const HireMeContainer = styled.section<HireMeContainerProps>`
     width: 100%;
     height: 180px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: ${({ theme }: HireMeContainerProps) => theme.colors.secondary.main};
+
+    @media (min-width: ${({ theme }: HireMeContainerProps) => theme.breakpoints.sl}) {
+        height: 250px;
+        &::before {
+            content: '';
+            background-color: ${({ theme }: HireMeContainerProps) => theme.colors.secondary.main};
+            height: 250px;
+            position: absolute;
+            width: 100%;
+        }
+    }
 `;
 
 type HireMeTitleProps = WithTheme;
@@ -47,5 +57,25 @@ export const HireMeEmail = styled.a<HireMeEmailProps>`
         &::after {
             width: 100%;
         }
+    }
+`;
+
+type HireMeTextContainerProps = WithTheme;
+
+export const HireMeTextContainer = styled.div<HireMeTextContainerProps>`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
+
+type HireMeDrawProps = WithTheme;
+
+export const HireMeDraw = styled.img<HireMeDrawProps>`
+    content: url('/hireMe-draw.svg');
+    display: none;
+
+    @media (min-width: ${({ theme }: HireMeDrawProps) => theme.breakpoints.sm}) {
+        display: block;
     }
 `;
