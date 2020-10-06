@@ -19,8 +19,8 @@ const Home: React.FC = () => {
                 <Showcase />
                 <HireMe />
                 <Footer />
-                <Cookies />
             </main>
+            <Cookies />
         </div>
     );
 };
