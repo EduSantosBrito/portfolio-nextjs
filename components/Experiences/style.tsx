@@ -11,7 +11,7 @@ export const ExperiencesContainer = styled.section`
 
 type ExperienceTitleProps = WithTheme;
 
-export const ExperienceTitle = styled.h4<ExperienceTitleProps>`
+export const ExperienceTitle = styled.h3<ExperienceTitleProps>`
     font-weight: 600;
     font-size: ${({ theme }: ExperienceTitleProps) => theme.fontSizes.large};
     color: ${({ theme }: ExperienceTitleProps) => theme.colors.white};
@@ -27,7 +27,7 @@ export const ExperienceDate = styled.p<ExperienceDateProps>`
 
 type ExperienceJobTitleProps = WithTheme;
 
-export const ExperienceJobTitle = styled.h5<ExperienceJobTitleProps>`
+export const ExperienceJobTitle = styled.h4<ExperienceJobTitleProps>`
     font-weight: 600;
     font-size: ${({ theme }: ExperienceJobTitleProps) => theme.fontSizes.default};
     color: ${({ theme }: ExperienceJobTitleProps) => theme.colors.white};

@@ -10,8 +10,8 @@ interface NavbarLayoutProps {
 const NavbarLayout = ({ open, onNavClick }: NavbarLayoutProps) => {
     return (
         <NavbarContainer open={open}>
-            <Logo dark={!open} />
-            <MenuIcon onClick={() => onNavClick(!open)} open={open} />
+            <Logo dark={!open} alt="That's my logo, it's written brito.top" />
+            <MenuIcon aria-label='Hamburger menu' onClick={() => onNavClick(!open)} open={open} />
             <NavList open={open}>
                 <a onClick={() => open && onNavClick(!open)} href='#header'>
                     Home

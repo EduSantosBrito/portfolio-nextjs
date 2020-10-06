@@ -61,7 +61,7 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                         background-color: ${theme.colors.background};
                     }
                     html {
-                        font-size: 10px;
+                        font-size: 12px;
                         scroll-behavior: smooth;
                     }
                     @media (min-width: ${theme.breakpoints.md}) {
