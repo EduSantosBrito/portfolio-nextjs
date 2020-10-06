@@ -34,6 +34,7 @@ interface LogoColor {
 }
 
 interface FontSizes {
+    extraSmall: string;
     small: string;
     default: string;
     large: string;

@@ -53,13 +53,23 @@ export const ChipsContainer = styled.div`
 type ChipProps = WithTheme;
 
 export const Chip = styled.div<ChipProps>`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 20px;
     background-color: ${({ theme }: ChipProps) => theme.colors.primary.main};
     font-weight: 600;
+    font-size: ${({ theme }: ChipProps) => theme.fontSizes.extraSmall};
     color: ${({ theme }: ChipProps) => theme.colors.white};
     text-transform: uppercase;
     padding: 2px 12px;
     border-radius: 10px;
+
+    @media (min-width: ${({ theme }: ChipProps) => theme.breakpoints.sm}) {
+        padding: 2px 18px;
+        height: 24px;
+        border-radius: 20px;
+    }
 `;
 
 export const ExperienceItem = styled.div`
