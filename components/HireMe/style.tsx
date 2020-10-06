@@ -11,7 +11,7 @@ export const HireMeContainer = styled.section<HireMeContainerProps>`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: ${({ theme }: HireMeContainerProps) => theme.colors.secondary};
+    background-color: ${({ theme }: HireMeContainerProps) => theme.colors.secondary.main};
 `;
 
 type HireMeTitleProps = WithTheme;

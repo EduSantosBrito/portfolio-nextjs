@@ -1,6 +1,6 @@
 import { SocialMediaItem } from '@types';
 import React from 'react';
-import { FooterContainer, FooterTitle, SocialMediaContainer } from './styled';
+import { FooterContainer, FooterTitle, SocialMediaContainer } from './style';
 
 interface FooterLayoutProps {
     items: SocialMediaItem[];

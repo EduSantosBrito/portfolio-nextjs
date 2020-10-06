@@ -1,5 +1,5 @@
 import React from 'react';
-import { HireMeContainer, HireMeTitle, HireMeEmail } from './styled';
+import { HireMeContainer, HireMeTitle, HireMeEmail } from './style';
 
 const HireMe = () => {
     return (
