@@ -19,7 +19,9 @@ export const FooterTitle = styled.h2<FooterTitleProps>`
     text-align: center;
 `;
 
-export const SocialMediaContainer = styled.div`
+type SocialMediaContainerProps = WithTheme;
+
+export const SocialMediaContainer = styled.div<SocialMediaContainerProps>`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -27,5 +29,11 @@ export const SocialMediaContainer = styled.div`
     margin-bottom: 32px;
     column-gap: 32px;
     row-gap: 16px;
-    cursor: pointer;
+    > * {
+        cursor: pointer;
+    }
+
+    @media (min-width: ${({ theme }: SocialMediaContainerProps) => theme.breakpoints.md}) {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 `;
