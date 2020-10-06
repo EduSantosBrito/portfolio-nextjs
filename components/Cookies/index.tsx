@@ -24,7 +24,7 @@ const Cookies = () => {
     useEffect(() => {
         getUserAcceptance()
             .then(hasUserAccepted => {
-                if (hasUserAccepted !== undefined) {
+                if (hasUserAccepted !== undefined && hasUserAccepted) {
                     ReactGA.initialize('UA-179714982-1');
                     ReactGA.pageview(`${document.location.pathname}${document.location.hash || ''}`);
                 }
