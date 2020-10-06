@@ -72,7 +72,9 @@ export const Chip = styled.div<ChipProps>`
     }
 `;
 
-export const ExperienceItem = styled.div`
+type ExperiencesItemProps = WithTheme;
+
+export const ExperienceItem = styled.div<ExperiencesItemProps>`
     margin: 16px 0px;
     width: 80%;
     display: flex;
@@ -80,4 +82,8 @@ export const ExperienceItem = styled.div`
     justify-content: center;
     align-items: flex-start;
     gap: 4px;
+
+    @media (min-width: ${({ theme }: ExperiencesItemProps) => theme.breakpoints.lg}) {
+        width: 60%;
+    }
 `;
