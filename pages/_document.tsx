@@ -46,7 +46,6 @@ export default class MyDocument extends Document {
                         rel='stylesheet'
                     />
                     <link rel='shortcut icon' href='/favicon.svg' />
-                    <title>Brito - Web developer</title>
                     <meta name='title' content='Brito - Web developer' />
                     <meta
                         name='description'

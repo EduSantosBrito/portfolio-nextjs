@@ -3,6 +3,7 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { Theme } from '@types';
+import Head from 'next/head';
 
 const theme: Theme = {
     logo: {
@@ -76,6 +77,9 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                     }
                 `}
             </style>
+            <Head>
+                <title>Brito - Web developer</title>
+            </Head>
             <Component {...pageProps} />
         </ThemeProvider>
     );
