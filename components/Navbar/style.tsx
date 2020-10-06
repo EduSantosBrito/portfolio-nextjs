@@ -52,6 +52,10 @@ export const MenuIcon = styled.button<MenuIconProps>`
                 transform: rotate(-45deg);
             `}
     }
+
+    @media (min-width: ${({ theme }: MenuIconProps) => theme.breakpoints.md}) {
+        display: none;
+    }
 `;
 
 interface NavbarContainerProps extends WithTheme {
@@ -60,7 +64,7 @@ interface NavbarContainerProps extends WithTheme {
 
 export const NavbarContainer = styled.div<NavbarContainerProps>`
     padding: 3rem 2.5rem;
-    width: 100vw;
+    width: 100%;
     height: 15vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -75,6 +79,10 @@ export const NavbarContainer = styled.div<NavbarContainerProps>`
             height: 100vh;
             background-color: ${theme.colors.primary.main};
         `}
+
+    @media (min-width: ${({ theme }: NavbarContainerProps) => theme.breakpoints.md}) {
+        grid-template-columns: 60% auto auto;
+    }
 `;
 
 interface NavListProps extends WithTheme {
@@ -94,6 +102,28 @@ export const NavList = styled.div<NavListProps>`
         color: ${({ theme }: NavListProps) => theme.colors.white};
         font-size: ${({ theme }: NavListProps) => theme.fontSizes.large};
         text-decoration: none;
+    }
+
+    @media (min-width: ${({ theme }: NavListProps) => theme.breakpoints.md}) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-self: flex-end;
+        align-self: center;
+        gap: 32px;
+        height: 100%;
+        a {
+            font-weight: 600;
+            color: ${({ theme }: NavListProps) => theme.colors.white};
+            font-size: ${({ theme }: NavListProps) => theme.fontSizes.small};
+            text-decoration: none;
+            animation: unset;
+            transition: color 300ms;
+
+            &:hover {
+                color: ${({ theme }: NavListProps) => theme.colors.primary.main};
+            }
+        }
     }
 `;
 
@@ -127,6 +157,10 @@ export const ButtonLink = styled.a<ButtonLinkProps>`
     }
 
     @media (min-width: ${({ theme }: ButtonLinkProps) => theme.breakpoints.md}) {
+        animation: unset;
         font-size: ${({ theme }: ButtonLinkProps) => theme.fontSizes.small};
+        display: flex;
+        grid-column: unset;
+        grid-row: unset;
     }
 `;

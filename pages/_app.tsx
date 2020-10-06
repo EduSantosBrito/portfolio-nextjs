@@ -62,6 +62,8 @@ const App: NextPage<AppProps> = ({ Component, pageProps }) => {
                         background-color: ${theme.colors.background};
                     }
                     html {
+                        max-width: 1440px;
+                        margin: 0 auto;
                         font-size: 12px;
                         scroll-behavior: smooth;
                     }
