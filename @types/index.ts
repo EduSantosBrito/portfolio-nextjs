@@ -11,6 +11,7 @@ interface Breakpoints {
     md: string;
     lg: string;
     xl: string;
+    sl: string;
 }
 
 interface ColorShade {
