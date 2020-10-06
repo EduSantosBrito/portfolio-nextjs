@@ -6,7 +6,7 @@ import { Button, CookiesContainer, CookiesLink, CookiesMessage, MessageContainer
 const BRITO_COOKIES_ACCEPTANCE = 'BRITO_COOKIES_ACCEPTANCE';
 
 const Cookies = () => {
-    const [userAcceptance, setUserAcceptance] = useState<boolean>(undefined);
+    const [userAcceptance, setUserAcceptance] = useState<boolean>(null);
     const getUserAcceptance = useCallback(async (): Promise<boolean> => {
         const hasUserAccepted: boolean = await get(BRITO_COOKIES_ACCEPTANCE);
         setUserAcceptance(hasUserAccepted);
