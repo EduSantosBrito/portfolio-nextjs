@@ -30,7 +30,7 @@ const ExperiencesLayout = ({ experiences }: ExperiencesLayoutProps) => {
                     <ExperienceDescription>{experience.description}</ExperienceDescription>
                     <ChipsContainer>
                         {experience.techs?.map(tech => (
-                            <Chip>{tech.title}</Chip>
+                            <Chip key={tech.title}>{tech.title}</Chip>
                         ))}
                     </ChipsContainer>
                 </ExperienceItem>
