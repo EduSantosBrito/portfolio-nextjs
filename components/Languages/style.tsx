@@ -1,3 +1,4 @@
+import { WithTheme } from 'shared/withTheme';
 import styled from 'styled-components';
 
 export const LanguagesContainer = styled.section`
@@ -21,7 +22,9 @@ export const CardsContainer = styled.section`
     }
 `;
 
-export const HorizontalScrollContainer = styled.div`
+type HorizontalScrollContainerProps = WithTheme;
+
+export const HorizontalScrollContainer = styled.div<HorizontalScrollContainerProps>`
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -32,10 +35,16 @@ export const HorizontalScrollContainer = styled.div`
     &::-webkit-scrollbar {
         display: none;
     }
+
+    @media (min-width: ${({ theme }: HorizontalScrollContainerProps) => theme.breakpoints.sm}) {
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+    }
 `;
 
 export const LanguageIcon = styled.img`
-    width: 20%;
+    width: 15%;
     position: absolute;
     right: 8px;
     bottom: 8px;
