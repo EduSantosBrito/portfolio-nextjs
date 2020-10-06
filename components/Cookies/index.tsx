@@ -26,7 +26,7 @@ const Cookies = () => {
             .then(hasUserAccepted => {
                 if (hasUserAccepted !== undefined) {
                     ReactGA.initialize('UA-179714982-1');
-                    ReactGA.pageview(document.location.pathname);
+                    ReactGA.pageview(`${document.location.pathname}${document.location.hash || ''}`);
                 }
             })
             // eslint-disable-next-line no-console
