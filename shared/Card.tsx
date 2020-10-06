@@ -6,7 +6,7 @@ type CardProps = WithTheme;
 export const Card = styled.div<CardProps>`
     width: auto;
     min-width: 100px;
-    max-width: 100vw;
+    max-width: 100%;
     height: auto;
     min-height: 100px;
     max-height: 200px;
@@ -23,7 +23,7 @@ export const Card = styled.div<CardProps>`
     position: relative;
     flex: 0 0 auto;
     &:hover {
-        background-color: ${({ theme }: CardProps) => theme.colors.typography.darker};
+        background-color: ${({ theme }: CardProps) => theme.colors.primary.darker};
     }
 `;
 
