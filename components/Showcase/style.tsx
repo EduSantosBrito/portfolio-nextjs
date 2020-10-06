@@ -26,6 +26,10 @@ export const ShowcaseLink = styled.a<ShowcaseLinkProps>`
         right: -5px;
         bottom: -3px;
         transition: right 500ms;
+
+        @media (min-width: ${({ theme }: ShowcaseLinkProps) => theme.breakpoints.md}) {
+            bottom: -1px;
+        }
     }
 
     &:hover {
