@@ -83,6 +83,9 @@ export const NavbarContainer = styled.div<NavbarContainerProps>`
     @media (min-width: ${({ theme }: NavbarContainerProps) => theme.breakpoints.md}) {
         grid-template-columns: 60% auto auto;
     }
+    @media (min-width: ${({ theme }: NavbarContainerProps) => theme.breakpoints.sl}) {
+        padding: 3rem 0;
+    }
 `;
 
 interface NavListProps extends WithTheme {

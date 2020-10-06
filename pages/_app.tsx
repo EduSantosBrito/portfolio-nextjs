@@ -31,6 +31,7 @@ const theme: Theme = {
         md: '801px',
         lg: '1025px',
         xl: '1281px',
+        sl: '1441px',
     },
     fontSizes: {
         small: '1rem',
