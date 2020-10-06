@@ -16,12 +16,12 @@ interface Breakpoints {
 interface ColorShade {
     main: string;
     dark: string;
-    darker: string;
+    darker?: string;
 }
 
 interface Colors {
     primary: ColorShade;
-    secondary: string;
+    secondary: ColorShade;
     typography: ColorShade;
     background: string;
     white: string;
