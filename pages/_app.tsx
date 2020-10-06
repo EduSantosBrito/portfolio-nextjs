@@ -34,6 +34,7 @@ const theme: Theme = {
         sl: '1441px',
     },
     fontSizes: {
+        extraSmall: '0.8rem',
         small: '1rem',
         default: '1.5rem',
         large: '2rem',
