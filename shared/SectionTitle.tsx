@@ -29,7 +29,7 @@ export const SectionTitle = styled.h2<SectionTitleProps>`
         left: 0;
         right: 0;
         bottom: 2px;
-        background-color: ${({ theme }: SectionTitleProps) => theme.colors.secondary};
+        background-color: ${({ theme }: SectionTitleProps) => theme.colors.secondary.main};
         transition: height 500ms;
         z-index: -1;
     }

@@ -15,7 +15,7 @@ export const ShowcaseLink = styled.a<ShowcaseLinkProps>`
     position: absolute;
     right: 20px;
     bottom: 8px;
-    color: ${({ theme }: ShowcaseLinkProps) => theme.colors.secondary};
+    color: ${({ theme }: ShowcaseLinkProps) => theme.colors.secondary.main};
     font-weight: 400;
     font-size: ${({ theme }: ShowcaseLinkProps) => theme.fontSizes.small};
     text-decoration: none;

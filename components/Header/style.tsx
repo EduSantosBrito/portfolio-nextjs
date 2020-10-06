@@ -36,5 +36,5 @@ type HeroTextOrangeProps = WithTheme;
 export const HeroTextOrange = styled.span<HeroTextOrangeProps>`
     font-weight: 600;
     font-size: ${({ theme }: HeroTextProps) => theme.fontSizes.extraLarge};
-    color: ${({ theme }: HeroTextOrangeProps) => theme.colors.secondary};
+    color: ${({ theme }: HeroTextOrangeProps) => theme.colors.secondary.main};
 `;

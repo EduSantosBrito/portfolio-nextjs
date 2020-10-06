@@ -15,7 +15,7 @@ const theme: Theme = {
             dark: '#42658F',
             darker: '#2C445F',
         },
-        secondary: '#F89C5A',
+        secondary: { main: '#F89C5A', dark: '#DF8C51' },
         typography: {
             main: '#959AA1',
             dark: '#56595E',

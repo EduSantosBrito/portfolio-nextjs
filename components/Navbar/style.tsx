@@ -102,13 +102,14 @@ interface ButtonLinkProps extends WithTheme {
 }
 
 export const ButtonLink = styled.a<ButtonLinkProps>`
+    cursor: pointer;
     display: ${({ dark }: ButtonLinkProps) => (dark ? 'none' : 'flex')};
     align-items: center;
     justify-content: center;
     grid-column: 1 / 3;
     grid-row: 3;
     height: 40px;
-    background-color: ${({ dark, theme }: ButtonLinkProps) => (dark ? theme.colors.primary.main : theme.colors.secondary)};
+    background-color: ${({ dark, theme }: ButtonLinkProps) => (dark ? theme.colors.primary.main : theme.colors.secondary.main)};
     font-weight: 600;
     color: ${({ theme }: ButtonLinkProps) => theme.colors.white};
     font-size: ${({ theme }: ButtonLinkProps) => theme.fontSizes.default};
@@ -119,4 +120,13 @@ export const ButtonLink = styled.a<ButtonLinkProps>`
     justify-self: center;
     align-self: center;
     text-decoration: none;
+    transition: background-color 500ms;
+
+    &:hover {
+        background-color: ${({ dark, theme }: ButtonLinkProps) => (dark ? theme.colors.primary.dark : theme.colors.secondary.dark)};
+    }
+
+    @media (min-width: ${({ theme }: ButtonLinkProps) => theme.breakpoints.md}) {
+        font-size: ${({ theme }: ButtonLinkProps) => theme.fontSizes.small};
+    }
 `;
