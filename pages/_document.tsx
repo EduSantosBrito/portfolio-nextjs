@@ -39,13 +39,37 @@ export default class MyDocument extends Document {
 
     render() {
         return (
-            <Html>
+            <Html lang='en'>
                 <Head>
                     <link
                         href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,800&display=swap'
                         rel='stylesheet'
                     />
                     <link rel='shortcut icon' href='/favicon.svg' />
+                    <title>Brito - Web developer</title>
+                    <meta name='title' content='Brito - Web developer' />
+                    <meta
+                        name='description'
+                        content="Hey, that's my website. Be free to come and see my experiences and open source projects. :)"
+                    />
+
+                    <meta property='og:type' content='website' />
+                    <meta property='og:url' content='https://brito.top' />
+                    <meta property='og:title' content='Brito - Web developer' />
+                    <meta
+                        property='og:description'
+                        content="Hey, that's my website. Be free to come and see my experiences and open source projects. :)"
+                    />
+                    <meta property='og:image' content='/og-image.png' />
+
+                    <meta property='twitter:card' content='summary_large_image' />
+                    <meta property='twitter:url' content='https://brito.top/' />
+                    <meta property='twitter:title' content='Brito - Web developer' />
+                    <meta
+                        property='twitter:description'
+                        content="Hey, that's my website. Be free to come and see my experiences and open source projects. :)"
+                    />
+                    <meta property='twitter:image' content='/og-image.png' />
                 </Head>
                 <body>
                     <Main />

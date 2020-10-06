@@ -41,8 +41,8 @@ const Cookies = () => {
         <CookiesContainer>
             <MessageContainer>
                 <CookiesMessage>This website uses cookies that store browsing data for analytical purposes only.</CookiesMessage>
-                <CookiesLink href='https://www.cookiesandyou.com' target='_blank'>
-                    Learn more
+                <CookiesLink href='https://www.cookiesandyou.com' rel='noopener' target='_blank'>
+                    Learn more about cookies
                 </CookiesLink>
             </MessageContainer>
             <OptionsContainer>

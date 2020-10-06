@@ -19,8 +19,8 @@ const ShowcaseLayout = ({ items }: ShowcaseLayoutProps) => {
                         <Card key={item.title}>
                             <CardTitle>{item.title}</CardTitle>
                             <CardDescription>{item.description}</CardDescription>
-                            <ShowcaseLink href={item.url} target='_blank'>
-                                See more
+                            <ShowcaseLink href={item.url} rel='noopener' target='_blank'>
+                                Project link
                             </ShowcaseLink>
                         </Card>
                     ))}
