@@ -53,7 +53,7 @@ export default class MyDocument extends Document {
                     />
 
                     <meta property='og:type' content='website' />
-                    <meta property='og:url' content='https://brito.top' />
+                    <meta property='og:url' content='https://portfolio.brito.top' />
                     <meta property='og:title' content='Brito - Web developer' />
                     <meta
                         property='og:description'
@@ -62,7 +62,7 @@ export default class MyDocument extends Document {
                     <meta property='og:image' content='/og-image.png' />
 
                     <meta property='twitter:card' content='summary_large_image' />
-                    <meta property='twitter:url' content='https://brito.top/' />
+                    <meta property='twitter:url' content='https://portfolio.brito.top/' />
                     <meta property='twitter:title' content='Brito - Web developer' />
                     <meta
                         property='twitter:description'
