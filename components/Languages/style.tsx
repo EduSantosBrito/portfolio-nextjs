@@ -37,9 +37,9 @@ export const HorizontalScrollContainer = styled.div<HorizontalScrollContainerPro
     }
 
     @media (min-width: ${({ theme }: HorizontalScrollContainerProps) => theme.breakpoints.sm}) {
-        flex-wrap: wrap;
-        gap: 16px;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+        gap: 1.5rem;
     }
 `;
 
