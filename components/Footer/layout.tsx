@@ -12,7 +12,7 @@ const FooterLayout = ({ items }: FooterLayoutProps) => {
             <FooterTitle>Follow me on my social media</FooterTitle>
             <SocialMediaContainer>
                 {items.map(item => (
-                    <a key={item.url} href={item.url} rel='noopener'>
+                    <a key={item.url} href={item.url} rel='noreferrer' target='_blank'>
                         <img src={item.icon} alt='Social media icon' />
                     </a>
                 ))}

@@ -7,6 +7,7 @@ export const ExperiencesContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 3rem;
 `;
 
 type ExperienceTitleProps = WithTheme;
@@ -57,7 +58,7 @@ export const Chip = styled.div<ChipProps>`
     justify-content: center;
     align-items: center;
     height: 20px;
-    background-color: ${({ theme }: ChipProps) => theme.colors.primary.main};
+    background-color: ${({ theme }: ChipProps) => theme.colors.primary.darker};
     font-weight: 600;
     font-size: ${({ theme }: ChipProps) => theme.fontSizes.extraSmall};
     color: ${({ theme }: ChipProps) => theme.colors.white};
